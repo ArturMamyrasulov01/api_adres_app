@@ -47,7 +47,8 @@ class _HomePageState extends State<HomePage> {
                 return ListView.builder(
                   itemBuilder: (context, index) {
                     return Text(
-                        snapshot.data![index].address!.suite.toString());
+                      snapshot.data![index].name.toString(),
+                    );
                   },
                   // itemCount: snapshot.data.length ,
                   itemCount: (snapshot.data as List).length,
