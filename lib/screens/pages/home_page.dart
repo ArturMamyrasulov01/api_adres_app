@@ -44,14 +44,16 @@ class _HomePageState extends State<HomePage> {
                   child: Text("Servicingizde kata bar!!!"),
                 );
               } else {
-                return ListView.builder(
-                  itemBuilder: (context, index) {
-                    return Text(
-                      snapshot.data![index].name.toString(),
-                    );
-                  },
-                  // itemCount: snapshot.data.length ,
-                  itemCount: (snapshot.data as List).length,
+                return Container( 
+                  child: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return Text(
+                        snapshot.data![index].name.toString(),
+                      );
+                    },
+                    // itemCount: snapshot.data.length ,
+                    itemCount: (snapshot.data as List).length,
+                  ),
                 );
               }
             }),
